@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Courses Designed for Student Success</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <div class="container">
+    <header>
+      <h1>Courses Designed for Student Success</h1>
+      <p>Discover a wide range of courses tailored to help students achieve their academic and career goals. Whether
+        you're preparing for exams, enhancing your skills, or pursuing higher education abroad, our programs are crafted
+        to support your journey. With expert guidance and student-focused learning, we empower you to take confident
+        steps toward a brighter future.</p>
+      <p>Explore your opportunities and unlock your potential today!</p>
+    </header>
+
+    <div class="filters">
+      <div class="filter-buttons">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="graduate">Graduate</button>
+        <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
+        <button class="filter-btn" data-filter="doctoral">Doctoral</button>
+      </div>
+      <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for Programs or Courses">
+        <button id="search-btn">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <div id="global-search-view" class="hidden">
+      <div class="search-results-header">
+        <h2>Search Results</h2>
+        <button id="clear-search" class="clear-search-btn">Clear Search</button>
+      </div>
+      <div class="search-results-container">
+        <div id="program-results">
+          <h3 class="results-section-title">Programs</h3>
+          <div id="program-results-container" class="courses-grid"></div>
+        </div>
+        <div id="course-results">
+          <h3 class="results-section-title">Courses</h3>
+          <div id="course-results-container" class="courses-grid"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main view with programs -->
+    <div id="programs-view" class="courses-grid">
+      <!-- Program cards will be dynamically inserted here -->
+    </div>
+
+    <!-- Detailed view with courses (initially hidden) -->
+    <div id="courses-view" class="hidden">
+      <div class="back-link">
+        <a href="#" id="back-to-programs">View all Programs</a>
+      </div>
+      <div id="courses-container" class="courses-grid">
+        <!-- Course cards will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
