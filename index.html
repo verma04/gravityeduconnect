@@ -19,12 +19,18 @@
       <p>Explore your opportunities and unlock your potential today!</p>
     </header>
 
+    <!-- Breadcrumb navigation -->
+    <nav class="breadcrumb-container" id="breadcrumb-container">
+      <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="#" id="breadcrumb-home">All Programs</a></li>
+        <li class="breadcrumb-item active" id="breadcrumb-program"></li>
+      </ol>
+    </nav>
+
     <div class="filters">
-      <div class="filter-buttons">
+      <div class="filter-buttons" id="filter-buttons">
         <button class="filter-btn active" data-filter="all">All</button>
-        <button class="filter-btn" data-filter="graduate">Graduate</button>
-        <button class="filter-btn" data-filter="undergraduate">Undergraduate</button>
-        <button class="filter-btn" data-filter="doctoral">Doctoral</button>
+        <!-- Category filters will be dynamically inserted here -->
       </div>
       <div class="search-container">
         <input type="text" id="search-input" placeholder="Search for Programs or Courses">
@@ -36,6 +42,18 @@
           </svg>
         </button>
       </div>
+    </div>
+
+    <!-- Loading indicator -->
+    <div id="loading" class="loading-container">
+      <div class="loading-spinner"></div>
+      <p>Loading data...</p>
+    </div>
+
+    <!-- Error message -->
+    <div id="error-message" class="error-message hidden">
+      <p>An error occurred while fetching data. Please try again later.</p>
+      <button id="retry-btn" class="retry-btn">Retry</button>
     </div>
 
     <div id="global-search-view" class="hidden">
@@ -62,9 +80,6 @@
 
     <!-- Detailed view with courses (initially hidden) -->
     <div id="courses-view" class="hidden">
-      <div class="back-link">
-        <a href="#" id="back-to-programs">View all Programs</a>
-      </div>
       <div id="courses-container" class="courses-grid">
         <!-- Course cards will be dynamically inserted here -->
       </div>
